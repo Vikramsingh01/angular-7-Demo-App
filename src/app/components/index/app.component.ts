@@ -60,7 +60,7 @@ export class AppComponent {
 
 	constructor() {
 		// Save students to localStorage
-		localStorage.setItem('students', JSON.stringify(this.studentsList));
+		//localStorage.setItem('students', JSON.stringify(this.studentsList));
 	}
 }
 

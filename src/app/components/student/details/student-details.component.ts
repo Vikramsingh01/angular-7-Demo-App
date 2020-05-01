@@ -36,11 +36,14 @@ export class StudentDetailsComponent implements OnInit {
 
 	// Get student details
 	getStudentDetails(index: number) {
-		const getStudentDetail = this.studentService.getStudentDetails(index);
-		if (getStudentDetail) {
-			this.studentDetail = getStudentDetail.studentData;
-			this.toastr.success(getStudentDetail.message, 'Success');
-		}
+		this.studentService.getStudentDetails(index).subscribe(data => {
+			if (data) {
+				this.studentDetail = data;
+				//his.toastr.success(getStudentDetail.message, 'Success');
+			}
+
+		})
+		
 	}
 
 }
